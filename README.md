@@ -2,6 +2,8 @@
 
 This Azure Function is a simple example of a process that causes excessive memory usage, which looks like some kind of leak, when the app is containerised and deployed to kubernetes.
 
+GitHub issue: <https://github.com/Azure/azure-functions-python-worker/issues/1449>
+
 ## The Problem Scenario
 
 Excessive memory usage was seen when an input blob binding was used to load the image which was then sent to a endpoint for inference. It is a simple concept queue trigger where:
